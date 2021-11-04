@@ -14,11 +14,12 @@ let addCard = (data) => {
   let headerDiv = document.createElement("div");
   let bodyDiv = document.createElement("div");
   let newh5 = document.createElement("h5");
-  let newp = document.createElement("p");
-  let newp2 = document.createElement("p");
+  let idPara = document.createElement("p");
+  let agePara = document.createElement("p");
+  let happyFeetPara = document.createElement("p");
 
   newDiv2.classList = "card, card bg-light mb-3";
-  newDiv2.style.width = "22rem";
+  newDiv2.style.maxWidth = "22rem";
 
   headerDiv.classList.add("d-flex", "flex-column", "card-header");
 
@@ -27,19 +28,31 @@ let addCard = (data) => {
   newh5.classList.add("card-title");
   newh5.textContent = `Penguin's name: ${data.name}`;
 
-  newp.classList.add("card-text");
-  newp.textContent = `Penguin's age: ${data.age}`;
+  idPara.classList.add("card-text");
+  idPara.textContent = `Penguin's ID: ${data.id}`;
 
-  newp2.classList.add("card-text");
-  newp2.textContent = `Penguin has happy feet: ${data.happyFeet}`;
+  agePara.classList.add("card-text");
+  agePara.textContent = `Penguin's age: ${data.age}`;
+
+  happyFeetPara.classList.add("card-text");
+
+  let hasHappyFeet = "Unknown";
+  if (data.happyFeet) {
+    hasHappyFeet = "yes";
+  } else if (!data.happyFeet) {
+    hasHappyFeet = "no";
+  }
+
+  happyFeetPara.textContent = `Penguin has happy feet: ${hasHappyFeet}`;
 
   starterDiv.appendChild(newDiv2);
 
   newDiv2.appendChild(headerDiv);
   headerDiv.appendChild(newh5);
   newDiv2.appendChild(bodyDiv);
-  bodyDiv.appendChild(newp);
-  bodyDiv.appendChild(newp2);
+  bodyDiv.appendChild(idPara);
+  bodyDiv.appendChild(agePara);
+  bodyDiv.appendChild(happyFeetPara);
 };
 
 let clearScreen = () => {
@@ -76,11 +89,11 @@ let addNotFoundCard = (idVal) => {
   let headerDiv = document.createElement("div");
   let bodyDiv = document.createElement("div");
   let newh5 = document.createElement("h5");
-  let newp = document.createElement("p");
-  let newp2 = document.createElement("p");
+  let firstPara = document.createElement("p");
+  let secondPara = document.createElement("p");
 
   newDiv2.classList = "card, card bg-warning mb-3";
-  newDiv2.style.width = "22rem";
+  newDiv2.style.maxWidth = "22rem";
 
   headerDiv.classList.add("d-flex", "flex-column", "card-header");
 
@@ -89,19 +102,19 @@ let addNotFoundCard = (idVal) => {
   newh5.classList.add("card-title");
   newh5.textContent = `Penguin not found`;
 
-  newp.classList.add("card-text");
-  newp.textContent = `Sorry. It seems like no penguin with an id of ${idVal} exists.`;
+  firstPara.classList.add("card-text");
+  firstPara.textContent = `Sorry. It seems like no penguin with an id of ${idVal} exists.`;
 
-  newp2.classList.add("card-text");
-  newp2.textContent = `Try viewing all penguins or creating a new one`;
+  secondPara.classList.add("card-text");
+  secondPara.textContent = `Try viewing all penguins or creating a new one`;
 
   starterDiv.appendChild(newDiv2);
 
   newDiv2.appendChild(headerDiv);
   headerDiv.appendChild(newh5);
   newDiv2.appendChild(bodyDiv);
-  bodyDiv.appendChild(newp);
-  bodyDiv.appendChild(newp2);
+  bodyDiv.appendChild(firstPara);
+  bodyDiv.appendChild(secondPara);
 };
 
 let readByID = (idVal) => {
@@ -134,7 +147,7 @@ searchButton.addEventListener("click", () => {
   let idToCheck = idNumberInput.value;
   clearScreen();
   readByID(idToCheck);
-  idNumberInput.textContent = "";
+  idNumberInput.value = "";
 });
 
 clearButton.addEventListener("click", clearScreen);
