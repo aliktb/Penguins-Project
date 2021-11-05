@@ -20,6 +20,7 @@ let addCard = (data) => {
 
   newDiv2.classList = "card, card bg-light mb-3";
   newDiv2.style.maxWidth = "22rem";
+  newDiv2.style.minWidth = "22rem";
 
   headerDiv.classList.add("d-flex", "flex-column", "card-header");
 

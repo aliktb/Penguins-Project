@@ -56,6 +56,73 @@
     </div>
     <div class="m-3">
       <h1 class="display-4">Welcome to the create page</h1>
+      <div style="max-width: 50rem">
+        <form>
+          <div class="col-sm">
+            <label for="nameTextInput" class="col-form-label text-nowrap"
+              >Penguin Name</label
+            >
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control" id="nameTextInput" />
+          </div>
+          <div class="col-sm">
+            <label for="ageNumberInput" class="col-form-label text-nowrap"
+              >Penguin Age</label
+            >
+          </div>
+          <div class="col-sm">
+            <input
+              type="number"
+              class="form-control"
+              id="ageNumberInput"
+              min="0"
+              max="100"
+            />
+          </div>
+          <fieldset>
+            <legend class="col-form-label col-sm">
+              Does this penguin have happy feet?
+            </legend>
+            <div>
+              <div class="form-check">
+                <input
+                  class="form-check-input-inline"
+                  type="radio"
+                  name="hasHappyFeetInput"
+                  id="yesRadioInput"
+                  value="true"
+                />
+                <label class="form-check-label" for="yesRadioInput">
+                  Yes
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input-inline"
+                  type="radio"
+                  name="hasHappyFeetInput"
+                  id="noRadioInput"
+                  value="false"
+                />
+                <label class="form-check-label" for="noRadioInput"> No </label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="mt-4 col-sm">
+            <button type="button" class="btn btn-primary" id="createNewButton">
+              Add Penguin
+            </button>
+          </div>
+          <div class="col-sm">
+            <div class="alert alert-success col-sm mt-4">
+              <strong>Success!</strong> Indicates a successful or positive
+              action.
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
+    <script src="create.js"></script>
   </body>
 </html>
