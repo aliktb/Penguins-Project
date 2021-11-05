@@ -20,7 +20,7 @@ let addSuccessUpdateMessage = (object) => {
 
   setTimeout(function () {
     $(".new-alert").fadeOut(400);
-  }, 2000);
+  }, 4000);
 };
 
 let addFailUpdateMessage = () => {
@@ -34,7 +34,7 @@ let addFailUpdateMessage = () => {
 
   setTimeout(function () {
     $(".new-alert").fadeOut(400);
-  }, 2000);
+  }, 4000);
 };
 
 let createUpdatedObject = () => {

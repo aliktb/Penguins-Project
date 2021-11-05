@@ -15,7 +15,7 @@ let addSuccessDeleteMessage = (idVal) => {
 
   setTimeout(function () {
     $(".new-alert").fadeOut(400);
-  }, 2000);
+  }, 4000);
 };
 
 let addFailDeleteMessage = () => {
@@ -29,7 +29,7 @@ let addFailDeleteMessage = () => {
 
   setTimeout(function () {
     $(".new-alert").fadeOut(400);
-  }, 2000);
+  }, 4000);
 };
 
 let deleteFunction = (idVal) => {
