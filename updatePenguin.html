@@ -54,8 +54,87 @@
         </div>
       </nav>
     </div>
+
     <div class="m-3">
       <h1 class="display-4">Welcome to the update page</h1>
+    </div>
+    <div style="max-width: 50rem">
+      <form>
+        <div class="col-sm">
+          <label for="idToUpdateInpute" class="col-form-label text-nowrap"
+            >ID of Penguin to update</label
+          >
+        </div>
+        <div class="col-sm">
+          <input
+            type="number"
+            class="form-control"
+            id="idToUpdateInpute"
+            min="0"
+            max="65535"
+          />
+        </div>
+        <div class="col-sm">
+          <label for="newNameTextInput" class="col-form-label text-nowrap"
+            >Penguin New Name</label
+          >
+        </div>
+
+        <div class="col-sm">
+          <input type="text" class="form-control" id="newNameTextInput" />
+        </div>
+        <div class="col-sm">
+          <label for="newAgeNumberInput" class="col-form-label text-nowrap"
+            >Penguin New Age</label
+          >
+        </div>
+        <div class="col-sm">
+          <input
+            type="number"
+            class="form-control"
+            id="newAgeNumberInput"
+            min="0"
+            max="100"
+          />
+        </div>
+        <fieldset>
+          <legend class="col-form-label col-sm">
+            Does this penguin now have happy feet?
+          </legend>
+          <div>
+            <div class="form-check">
+              <input
+                class="form-check-input-inline"
+                type="radio"
+                name="hasHappyFeetInputUpdated"
+                id="yesRadioInputUpdated"
+                value="true"
+              />
+              <label class="form-check-label" for="yesRadioInputUpdated">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input-inline"
+                type="radio"
+                name="hasHappyFeetInputUpdated"
+                id="noRadioInputUpdated"
+                value="false"
+              />
+              <label class="form-check-label" for="noRadioInputUpdated">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="mt-4 col-sm">
+          <button type="button" class="btn btn-primary" id="updateButton">
+            Update Penguin
+          </button>
+        </div>
+        <div class="col-sm" id="alertUpdateDiv"></div>
+      </form>
     </div>
   </body>
 </html>
