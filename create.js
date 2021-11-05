@@ -17,7 +17,7 @@ let addSuccessMessage = (object) => {
 
   setTimeout(function () {
     $(".new-alert").fadeOut(400);
-  }, 2000);
+  }, 4000);
 };
 
 let addFailMessage = () => {
@@ -31,7 +31,7 @@ let addFailMessage = () => {
 
   setTimeout(function () {
     $(".new-alert").fadeOut(400);
-  }, 2000);
+  }, 4000);
 };
 
 let postData = () => {

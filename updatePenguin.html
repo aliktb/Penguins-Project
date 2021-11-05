@@ -11,6 +11,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div>
@@ -54,8 +55,87 @@
         </div>
       </nav>
     </div>
+
     <div class="m-3">
       <h1 class="display-4">Welcome to the update page</h1>
     </div>
-  </body>
+    <div style="max-width: 50rem">
+      <form>
+        <div class="col-sm">
+          <label for="idToUpdateInput" class="col-form-label text-nowrap"
+            >ID of Penguin to update</label
+          >
+        </div>
+        <div class="col-sm">
+          <input
+            type="number"
+            class="form-control"
+            id="idToUpdateInput"
+            min="0"
+            max="65535"
+          />
+        </div>
+        <div class="col-sm">
+          <label for="newNameTextInput" class="col-form-label text-nowrap"
+            >Penguin New Name</label
+          >
+        </div>
+
+        <div class="col-sm">
+          <input type="text" class="form-control" id="newNameTextInput" />
+        </div>
+        <div class="col-sm">
+          <label for="newAgeNumberInput" class="col-form-label text-nowrap"
+            >Penguin New Age</label
+          >
+        </div>
+        <div class="col-sm">
+          <input
+            type="number"
+            class="form-control"
+            id="newAgeNumberInput"
+            min="0"
+            max="100"
+          />
+        </div>
+        <fieldset>
+          <legend class="col-form-label col-sm">
+            Does this penguin now have happy feet?
+          </legend>
+          <div>
+            <div class="form-check">
+              <input
+                class="form-check-input-inline"
+                type="radio"
+                name="hasHappyFeetInputUpdated"
+                id="yesRadioInputUpdated"
+                value="true"
+              />
+              <label class="form-check-label" for="yesRadioInputUpdated">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input-inline"
+                type="radio"
+                name="hasHappyFeetInputUpdated"
+                id="noRadioInputUpdated"
+                value="false"
+              />
+              <label class="form-check-label" for="noRadioInputUpdated">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="mt-4 col-sm">
+          <button type="button" class="btn btn-primary" id="updateButton">
+            Update Penguin
+          </button>
+        </div>
+        <div class="col-sm" id="alertUpdateDiv"></div>
+      </form>
+    </div>
+    <script src="update.js"></script>
 </html>
