@@ -58,27 +58,38 @@
     <div class="m-3">
       <h1 class="display-4">Welcome to the search page</h1>
       <div class="mt-4">
-        <div class="form-group">
-          <label for="idNumberInput">Enter ID</label>
-          <input
-            type="number"
-            id="idNumberInput"
-            name="idNumberInput"
-            min="1"
-            max="1000"
-            placeholder="Type ID"
-          />
-          <button type="button" id="searchButton" class="btn btn-primary">
-            Search
-          </button>
-          <button type="button" id="readAllButton" class="btn btn-info">
-            View All Penguins
-          </button>
-          <button type="button" id="clearButton" class="btn btn-Secondary">
-            Clear
-          </button>
-        </div>
-
+        <form class="form-inline">
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="idNumberInput">Enter ID</label>
+            </div>
+            <div class=" mx-sm-1 mb-2">
+            <input
+              type="number"
+              id="idNumberInput"
+              name="idNumberInput"
+              min="1"
+              max="1000"
+              placeholder="Type ID"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group mx-sm-1 mb-2">
+            <button type="button" id="searchButton" class="btn btn-primary">
+              Search
+            </button>
+            </div>
+            <div class=" mx-sm-3 mb-2">
+            <button type="button" id="readAllButton" class="btn btn-info">
+              View All Penguins
+            </button>
+            </div>
+            <div class=" mx-sm-2 mb-2">
+            <button type="button" id="clearButton" class="btn btn-Secondary">
+              Clear
+            </button>
+            </div>
+          </div>
+        </form>
         <div
           id="starterDiv"
           class="card-deck row row-cols-1 row-cols-md-2 g-4"
