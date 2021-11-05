@@ -16,6 +16,21 @@ let addSuccessMessage = (object) => {
   successDiv.appendChild(newDiv);
 };
 
+let addFailMessage = (object) => {
+  let newDiv = document.createElement("div");
+
+  newDiv.classList = "alert alert-danger col-sm mt-4";
+  newDiv.id = "new-alert";
+
+  newDiv.innerHTML = `<strong>Error!</strong> An error has occured!`;
+
+  successDiv.appendChild(newDiv);
+
+  setTimeout(function () {
+    $("#new-alert").fadeOut(400);
+  }, 2000);
+};
+
 let postData = () => {
   let nameFromInput = nameTextInput.value;
   let ageFromInput = ageNumberInput.value;
@@ -46,13 +61,14 @@ let postFunction = (object) => {
   }).then((response) => {
     if (response.status !== 201) {
       console.error(`Status: ${response.status}`);
+      addFailMessage(object);
       return;
     }
+    addSuccessMessage(object);
     response.json().then((data) => {
       console.log(data);
     });
   });
-  addSuccessMessage(object);
 };
 
 createNewButton.addEventListener("click", postData);
