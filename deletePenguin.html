@@ -11,6 +11,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div>
@@ -56,6 +57,34 @@
     </div>
     <div class="m-3">
       <h1 class="display-4">Welcome to the delete page</h1>
+
+      <div style="max-width: 50rem">
+        <form>
+          <div class="col-sm">
+            <label for="IDNumberInput" class="col-form-label text-nowrap"
+              >Penguin ID</label
+            >
+          </div>
+          <div class="col-sm-3">
+            <input
+              type="number"
+              class="form-control"
+              id="IDNumberInput"
+              min="0"
+              max="1000"
+            />
+          </div>
+
+          <div class="mt-4 col-sm">
+            <button type="button" class="btn btn-primary" id="deleteButton">
+              Delete Penguin
+            </button>
+          </div>
+          <div class="col-sm" id="alertDiv"></div>
+        </form>
+      </div>
     </div>
+
+    <script src="delete.js"></script>
   </body>
 </html>

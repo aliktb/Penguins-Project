@@ -20,7 +20,7 @@ let addSuccessMessage = (object) => {
   }, 2000);
 };
 
-let addFailMessage = (object) => {
+let addFailMessage = () => {
   let newDiv = document.createElement("div");
 
   newDiv.classList = "alert alert-danger col-sm mt-4 new-alert";
@@ -64,7 +64,7 @@ let postFunction = (object) => {
   }).then((response) => {
     if (response.status !== 201) {
       console.error(`Status: ${response.status}`);
-      addFailMessage(object);
+      addFailMessage();
       return;
     }
     addSuccessMessage(object);
