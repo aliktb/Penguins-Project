@@ -138,10 +138,8 @@ let readByID = (idVal) => {
 };
 
 readAllButton.addEventListener("click", () => {
-  if (allRead == false) {
-    clearScreen();
-    readAll();
-  }
+  clearScreen();
+  readAll();
 });
 
 searchButton.addEventListener("click", () => {

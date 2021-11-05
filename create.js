@@ -4,8 +4,17 @@ let nameTextInput = document.querySelector("#nameTextInput");
 let ageNumberInput = document.querySelector("#ageNumberInput");
 let hasHappyFeetInput = document.getElementsByName("hasHappyFeetInput");
 let createNewButton = document.querySelector("#createNewButton");
+let successDiv = document.querySelector("#successDiv");
 
-let addSuccessMessage = () => {};
+let addSuccessMessage = (object) => {
+  let newDiv = document.createElement("div");
+
+  newDiv.classList = "alert alert-success col-sm mt-4";
+
+  newDiv.innerHTML = `<strong>Success!</strong> Penguin <strong>${object.name}</strong> has been added!`;
+
+  successDiv.appendChild(newDiv);
+};
 
 let postData = () => {
   let nameFromInput = nameTextInput.value;
@@ -43,6 +52,7 @@ let postFunction = (object) => {
       console.log(data);
     });
   });
+  addSuccessMessage(object);
 };
 
 createNewButton.addEventListener("click", postData);
