@@ -9,25 +9,28 @@ let successDiv = document.querySelector("#successDiv");
 let addSuccessMessage = (object) => {
   let newDiv = document.createElement("div");
 
-  newDiv.classList = "alert alert-success col-sm mt-4";
+  newDiv.classList = "alert alert-success col-sm mt-4 new-alert";
 
   newDiv.innerHTML = `<strong>Success!</strong> Penguin <strong>${object.name}</strong> has been added!`;
 
   successDiv.appendChild(newDiv);
+
+  setTimeout(function () {
+    $(".new-alert").fadeOut(400);
+  }, 2000);
 };
 
 let addFailMessage = (object) => {
   let newDiv = document.createElement("div");
 
-  newDiv.classList = "alert alert-danger col-sm mt-4";
-  newDiv.id = "new-alert";
+  newDiv.classList = "alert alert-danger col-sm mt-4 new-alert";
 
   newDiv.innerHTML = `<strong>Error!</strong> An error has occured!`;
 
   successDiv.appendChild(newDiv);
 
   setTimeout(function () {
-    $("#new-alert").fadeOut(400);
+    $(".new-alert").fadeOut(400);
   }, 2000);
 };
 
